@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherNow</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+    <header class="bg-primary text-white text-center py-3">
+        <div class="container">
+            <h1>WeatherNow</h1>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main class="container my-4">
+        <div class="card">
+            <div class="card-body text-center">
+                <h2>Check the Weather in Your City</h2>
+                <div id="map" class="my-4"></div>
+                <form id="weatherForm" class="my-4">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="city" placeholder="City" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="country" placeholder="Country" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="area" placeholder="Area (optional)">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Get Weather</button>
+                </form>
+                <div id="weatherInfo"></div>
+            </div>
+        </div>
+    </main>
+    <footer class="bg-primary text-white text-center py-3 mt-auto">
+        <div class="container">
+            <p>&copy; 2024 WeatherNow. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
